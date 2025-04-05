@@ -5,9 +5,7 @@ export const insertCommonMenu = `
   ) VALUES (?, ?, ?, ?, ?, 'Y', ?, SYSDATE, ?);
 `;
 
-export const getAllCommonMenus = `
-  SELECT * FROM common_menu WHERE is_active = 1 ORDER BY depth, menu_id;
-`;
+export const getAllCommonMenus = `SELECT * FROM common_menu WHERE is_active = 1 ORDER BY depth, menu_id`;
 
 export const getCommonMenuById = `
   SELECT * FROM common_menu WHERE menu_id = ? AND is_active = 1;

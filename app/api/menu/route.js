@@ -10,7 +10,10 @@ import { withLogging } from '@/lib/withLogging';
 import { withErrorHandling } from '@/lib/withErrorHandling';
 
 async function handler(req) {
+  debugger;
+  console.log(req);
   try {
+    console.log("test0");
     if (req.method !== 'POST') {
       return new Response(JSON.stringify({ error: 'Method Not Allowed' }), { status: 405 });
     }
